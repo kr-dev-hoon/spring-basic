@@ -1,0 +1,41 @@
+
+### 1. Sign Up
+POST http://localhost:7799/sign-up
+content-type: application/json
+
+{
+  "name": "huni",
+  "nickName": "huni",
+  "password": "abAB12!@DFAIDFLM",
+  "countryCode": 1,
+  "phone": "1012345678",
+  "email": "emailA+11@basic.com",
+  "sex": "MAIL"
+}
+
+### 2. Sign In
+
+POST http://localhost:7799/sign-in
+content-type: application/json
+
+{
+  "name": "huni",
+  "password": "abAB12!@DFAIDFLM"
+}
+
+### 3. All Acount
+
+GET http://localhost:7799/account?offset=0&limit=10&sort=id:desc&searchType=NAME&search=huni
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTYxMTg2MzMwNywianRpIjoiaHVuaSIsImV4cCI6MTYxMTg2NjkwN30.RudFr8ViaPF5kMiPkn_HT8oCpAaSaquzZwinveAtPiTteq4aTBLUUOo0vt5x4reKnUNXqBEI3_mmo0HR0RC4wA
+
+### 3. All Account - Not Search
+GET http://localhost:7799/account?offset=0&limit=10&sort=id:desc
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTYxMTg2MjI0NywianRpIjoiaHVuaSIsImV4cCI6MTYxMTg2NTg0N30.VvIlvBZN3UGsHoOB6jnLEut3_DSWfnUe_i6R6jvGHY1U08mZLIMlLwoR_d2Y59uut7WDDUeELWYMgJDmdkHYVQ
+
+### 5. Find Detail
+GET http://localhost:7799/account/1
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTYxMTg1ODY5NSwianRpIjoiYUEiLCJleHAiOjE2MTE4NjIyOTV9.Skr0kHNF_9WxmIA6UeAbnk5xJ95lpXaZvjZc67OJzWTWhlyM5xiNz0f61WYzGGUkjG7HqZMkXZmKAPL4XFUdzQ
+
+### 6. Logout
+GET http://localhost:7799/logout
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTYxMTg2MzMwNywianRpIjoiaHVuaSIsImV4cCI6MTYxMTg2NjkwN30.RudFr8ViaPF5kMiPkn_HT8oCpAaSaquzZwinveAtPiTteq4aTBLUUOo0vt5x4reKnUNXqBEI3_mmo0HR0RC4wA

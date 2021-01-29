@@ -1,0 +1,30 @@
+
+### 1. Registry Orders
+POST http://localhost:7799/order
+content-type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTYxMTg2NDQzMywianRpIjoiaHVuaSIsImV4cCI6MTYxMTg2ODAzM30.-4afQWvVaNsAiBIaAyn5KDfdSfqrYdZkzvFUQDH458inOdtOKwR1M0xEyw-Duoi7gECqq6ICJjH1BzpoMPv5Wg
+
+{
+  "accountId": 2,
+  "productId": 7
+}
+
+### 2. Find All Orders
+GET http://localhost:7799/order?limit=3&offset=0&sort=createdAt:desc
+content-type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTYxMTg2NDQzMywianRpIjoiaHVuaSIsImV4cCI6MTYxMTg2ODAzM30.-4afQWvVaNsAiBIaAyn5KDfdSfqrYdZkzvFUQDH458inOdtOKwR1M0xEyw-Duoi7gECqq6ICJjH1BzpoMPv5Wg
+
+### 3. Account 별 Orders 정보 조회 - Not Search
+GET http://localhost:7799/order/account?limit=3&offset=0&sort=id:asc
+content-type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTYxMTg2NDQzMywianRpIjoiaHVuaSIsImV4cCI6MTYxMTg2ODAzM30.-4afQWvVaNsAiBIaAyn5KDfdSfqrYdZkzvFUQDH458inOdtOKwR1M0xEyw-Duoi7gECqq6ICJjH1BzpoMPv5Wg
+
+### 4. Account 별 Orders 정보 조회 - Contain Search
+GET http://localhost:7799/order/account?limit=3&offset=0&sort=id:asc&searchType=NAME&search=huni
+content-type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTYxMTg2NDQzMywianRpIjoiaHVuaSIsImV4cCI6MTYxMTg2ODAzM30.-4afQWvVaNsAiBIaAyn5KDfdSfqrYdZkzvFUQDH458inOdtOKwR1M0xEyw-Duoi7gECqq6ICJjH1BzpoMPv5Wg
+
+### 5. 지정 Account 의 Orders 정보 조회
+GET http://localhost:7799/order/account/2
+content-type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTYxMTg2NDQzMywianRpIjoiaHVuaSIsImV4cCI6MTYxMTg2ODAzM30.-4afQWvVaNsAiBIaAyn5KDfdSfqrYdZkzvFUQDH458inOdtOKwR1M0xEyw-Duoi7gECqq6ICJjH1BzpoMPv5Wg
